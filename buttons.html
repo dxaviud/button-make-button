@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buttons</title>
+    </head>
+    <body>
+        <button>Click me</button>
+        <br>
+
+        <script>
+           
+            function createButton() {
+                let button = document.createElement("button");
+                button.addEventListener("click", createButton);
+                button.textContent = "Click me";
+                document.body.appendChild(button);
+                document.body.appendChild(document.createElement("br"));
+            }
+
+            const firstButton = document.querySelector("button");
+            firstButton.addEventListener("click", createButton);
+        
+        </script>
+    </body>
+</html>
